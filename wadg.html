@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ودق | WADQ</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+*{font-family:'Amiri',serif!important;box-sizing:border-box}
+html,body{overflow-x:hidden}
+.hide{scrollbar-width:none}.hide::-webkit-scrollbar{display:none}
+.page{display:none}.page.show{display:block}
+.nav-pill.active{background:#6D28D9!important;color:#fff!important}
+.cat-pill.active{background:#6D28D9!important;color:#fff!important}
+.hero-grad{background:linear-gradient(160deg,#7C3AED 0%,#8B5CF6 35%,#A78BFA 70%,#C4B5FD 100%)}
+.card-top{background:linear-gradient(160deg,#F5EFE6,#EDE9FE,#DDD6FE)}
+input,textarea{font-family:'Amiri',serif!important}
+</style>
+</head>
+<body class="bg-[#FDF8F0] pb-24">
+<div class="bg-[#4C1D95] text-white text-center py-2 px-3 text-[13px] font-bold">ودق - مقهى الشارع | مفتوحون يومياً من الساعة 4 عصراً حتى 2:30 صباحاً 🌙 | بدون جلسات، قهوتك بحبٍ تأخذها معك</div>
+<div class="bg-[#FDF8F0] sticky top-0 z-40 border-b border-[#EDE9FE]">
+<div class="max-w-[1100px] mx-auto px-3 py-3 flex items-center justify-center">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-[#EDE9FE] rounded-xl flex items-center justify-center text-[20px]">🧾</div>
+<div class="text-center leading-none"><p class="text-[24px] font-bold text-[#2E1065]">ودق</p><p class="text-[10px] tracking-widest text-gray-500">WADQ • STREET CAFE</p></div>
+<div class="w-10 h-10 bg-[#6D28D9] rounded-xl flex items-center justify-center text-[20px]">☕</div>
+</div>
+</div>
+<div class="max-w-[1100px] mx-auto px-3 pb-3 flex gap-2 overflow-x-auto hide justify-start md:justify-center">
+<button onclick="go('home',this)" class="nav-pill active whitespace-nowrap px-5 py-2 rounded-full bg-white border text-[15px] font-bold">الرئيسية</button>
+<button onclick="go('menu',this)" class="nav-pill whitespace-nowrap px-5 py-2 rounded-full bg-white border text-[15px] font-bold">القائمة</button>
+<button onclick="go('about',this)" class="nav-pill whitespace-nowrap px-5 py-2 rounded-full bg-white border text-[15px] font-bold">من نحن</button>
+<button onclick="go('contact',this)" class="nav-pill whitespace-nowrap px-5 py-2 rounded-full bg-white border text-[15px] font-bold">تواصل معنا</button>
+<button onclick="go('order',this)" class="nav-pill whitespace-nowrap px-5 py-2 rounded-full bg-white border text-[15px] font-bold">اطلب الآن</button>
+</div>
+</div>
+<div class="max-w-[1100px] mx-auto px-3">
+<div id="page-home" class="page show">
+<div class="mt-3 hero-grad rounded-[28px] p-6 text-center text-white relative overflow-hidden">
+<span class="bg-white/25 backdrop-blur px-4 py-1.5 rounded-full text-[13px] font-bold">☕ مقهى شارع • طلبات خارجية فقط • مفتوحون من 4 عصراً 🌙</span>
+<h1 class="text-[40px] md:text-[56px] leading-[1.15] font-bold mt-4">ودق<br>حيث تُروى<br>حكاية القهوة</h1>
+<p class="text-white/90 text-[16px] md:text-[18px] leading-[1.9] mt-3 max-w-[600px] mx-auto">رشفة فاخرة وحكاية تبدأ من أول فنجان،<br>قهوتنا ترويها لك بكل حب، لتأخذها معك وتكمل يومك بذوق راقٍ.</p>
+<div class="flex gap-2 justify-center mt-5 max-w-[500px] mx-auto">
+<button onclick="go('order',null)" class="flex-1 bg-white text-[#4C1D95] py-3.5 rounded-full font-bold text-[16px]">اطلب الآن ←</button>
+<button onclick="go('menu',null)" class="flex-1 bg-white/20 border border-white/40 py-3.5 rounded-full font-bold text-[16px]">اكتشف القائمة</button>
+</div>
+<div class="bg-white text-[#2E1065] rounded-[22px] p-4 mt-5 max-w-[600px] mx-auto text-right shadow">
+<div class="flex items-center justify-between"><div><p class="font-bold text-[17px]">⭐ 4.9 - ودق WADQ</p><p class="text-[13px] text-gray-500">قهوتنا جاهزة لتأخذها معك</p></div><span class="bg-[#F5EFE6] px-3 py-1 rounded-full text-[13px]">طلبات خارجية</span></div>
+<p class="text-[14px] text-gray-600 mt-2">اطلب الآن واستلم طلبك ساخناً وطازجاً، دون انتظار</p>
+<p class="text-[13px] text-[#6D28D9] font-bold mt-1">🕐 مفتوحون يومياً من 4 عصراً حتى 2:30 صباحاً</p>
+<div class="flex gap-2 mt-3"><button onclick="go('menu',null)" class="flex-1 bg-[#F5EFE6] py-2.5 rounded-full font-bold">تصفح القائمة ←</button><button onclick="go('order',null)" class="flex-1 bg-[#6D28D9] text-white py-2.5 rounded-full font-bold">اطلب الآن</button></div>
+</div>
+<div class="flex gap-2 mt-4 text-center">
+<div class="flex-1 bg-white rounded-2xl py-3"><p class="font-bold text-[20px] text-[#6D28D9]">+23</p><p class="text-[12px] text-gray-500">صنف قهوة</p></div>
+<div class="flex-1 bg-white rounded-2xl py-3"><p class="font-bold text-[20px] text-[#6D28D9]">20</p><p class="text-[12px] text-gray-500">مشروب بارد</p></div>
+<div class="flex-1 bg-white rounded-2xl py-3"><p class="font-bold text-[20px] text-[#6D28D9]">12</p><p class="text-[12px] text-gray-500">حلوى</p></div>
+</div>
+</div>
+<div class="grid md:grid-cols-3 gap-3 mt-4">
+<div class="bg-white rounded-[22px] p-5 border border-[#EDE9FE]"><p class="text-[28px]">☕</p><h3 class="font-bold text-[19px] text-[#2E1065] mt-2">تحميص طازج</h3><p class="text-[14px] text-gray-500 leading-[1.9] mt-1">بن إثيوبي وكولومبي ويمني، نطحنه طازجاً أمامك لتكون النكهة على أصولها.</p></div>
+<div class="bg-white rounded-[22px] p-5 border border-[#EDE9FE]"><p class="text-[28px]">🧊</p><h3 class="font-bold text-[19px] text-[#2E1065] mt-2">انتعاش بارد</h3><p class="text-[14px] text-gray-500 leading-[1.9] mt-1">سبانيش لاتيه وموهيتو وكركديه، بارد ومنعش يجعل يومك أجمل.</p></div>
+<div class="bg-white rounded-[22px] p-5 border border-[#EDE9FE]"><p class="text-[28px]">🌙</p><h3 class="font-bold text-[19px] text-[#2E1065] mt-2">مزاج الليل</h3><p class="text-[14px] text-gray-500 leading-[1.9] mt-1">مفتوحون من 4 عصراً حتى 2:30 صباحاً، مكانك للاسترخاء ليلاً.</p></div>
+</div>
+<div class="mt-6">
+<h2 class="text-[26px] font-bold text-center text-[#2E1065]">كيف تطلب من ودق؟</h2>
+<p class="text-center text-[14px] text-gray-500">ثلاث خطوات فقط وقهوتك لديك</p>
+<div class="grid md:grid-cols-3 gap-3 mt-4">
+<div class="bg-[#EDE9FE] rounded-[22px] p-5 text-center"><p class="w-10 h-10 bg-[#6D28D9] text-white rounded-full mx-auto flex items-center justify-center font-bold">1</p><p class="font-bold text-[17px] mt-2">اختر من القائمة</p><p class="text-[14px] text-gray-600">تصفح القائمة واختر مشروبك المفضل</p></div>
+<div class="bg-[#F5EFE6] rounded-[22px] p-5 text-center"><p class="w-10 h-10 bg-[#6D28D9] text-white rounded-full mx-auto flex items-center justify-center font-bold">2</p><p class="font-bold text-[17px] mt-2">أضف إلى السلة</p><p class="text-[14px] text-gray-600">اضغط على + واختر الكمية وملاحظتك</p></div>
+<div class="bg-[#EDE9FE] rounded-[22px] p-5 text-center"><p class="w-10 h-10 bg-[#6D28D9] text-white rounded-full mx-auto flex items-center justify-center font-bold">3</p><p class="font-bold text-[17px] mt-2">أرسل عبر واتساب</p><p class="text-[14px] text-gray-600">نجهز لك طلبك وتستلمه ساخناً</p></div>
+</div>
+</div>
+<h2 class="text-[26px] font-bold text-center text-[#2E1065] mt-6">الأكثر طلباً 🔥</h2>
+<div id="bestGrid" class="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-3"></div>
+<div class="mt-6 hero-grad rounded-[28px] p-6 text-center text-white">
+<h3 class="text-[26px] font-bold">جاهز لقهوتك القادمة؟</h3>
+<p class="text-white/90 mt-1">اختر طلبك، وخذه معك، دون انتظار طويل.</p>
+<p class="text-[13px] text-white/80 mt-1">🕐 مفتوحون من 4 عصراً حتى 2:30 صباحاً</p>
+<button onclick="go('order',null)" class="bg-white text-[#6D28D9] px-8 py-3 rounded-full font-bold mt-4">ابدأ الطلب الآن ←</button>
+</div>
+</div>
+<div id="page-menu" class="page">
+<div class="mt-4">
+<h2 class="text-[28px] font-bold text-center text-[#2E1065]">اختر ما يليق بذوقك</h2>
+<p class="text-center text-[14px] text-gray-500">جميع الأصناف طازجة وتُحضَّر عند الطلب</p>
+<div class="flex items-center bg-white rounded-full shadow-sm px-4 py-3 border border-[#EDE9FE] max-w-[600px] mx-auto mt-3">
+<span>🔍</span><input id="searchInput" oninput="filterItems()" placeholder="ابحث عن قهوتك المفضلة..." class="flex-1 outline-none px-2 text-[16px] bg-transparent">
+</div>
+<div class="flex gap-2 mt-4 overflow-x-auto hide pb-1 justify-start md:justify-center">
+<button onclick="showCat('all',this)" class="cat-pill active whitespace-nowrap bg-white border px-5 py-2.5 rounded-full text-[15px] font-bold">الكل</button>
+<button onclick="showCat('hot',this)" class="cat-pill whitespace-nowrap bg-white border px-5 py-2.5 rounded-full text-[15px] font-bold">🔥 ساخنة</button>
+<button onclick="showCat('cold',this)" class="cat-pill whitespace-nowrap bg-white border px-5 py-2.5 rounded-full text-[15px] font-bold">🧊 باردة</button>
+<button onclick="showCat('sweet',this)" class="cat-pill whitespace-nowrap bg-white border px-5 py-2.5 rounded-full text-[15px] font-bold">🍰 حلويات</button>
+</div>
+<div id="menuGrid" class="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-4"></div>
+</div>
+</div>
+<div id="page-order" class="page">
+<div class="mt-4 max-w-[700px] mx-auto">
+<h2 class="text-[28px] font-bold text-center text-[#2E1065]">اطلب الآن</h2>
+<p class="text-center text-[14px] text-gray-500">راجع طلبك وأرسله عبر واتساب، نجهزه لك فوراً</p>
+<p class="text-center text-[13px] text-[#6D28D9] font-bold">🕐 مفتوحون من 4 عصراً حتى 2:30 صباحاً</p>
+<div class="bg-white rounded-[22px] border border-[#EDE9FE] p-4 mt-4">
+<h3 class="font-bold text-[19px]">سلتك</h3>
+<div id="cartBox" class="mt-2"></div>
+<div class="flex justify-between mt-3 border-t pt-3"><span class="font-bold">الإجمالي</span><span id="cartTotal" class="font-bold text-[19px] text-[#6D28D9]">0 ر.س</span></div>
+<p class="font-bold mt-4">اسمك:</p>
+<input id="custName" placeholder="اكتب اسمك هنا..." class="w-full border border-[#EDE9FE] rounded-xl p-3 text-[16px] outline-none bg-[#FDF8F0] mt-1">
+<p class="font-bold mt-3">ملاحظة للطلب:</p>
+<input id="custNote" placeholder="مثال: بدون سكر / سكر إضافي..." class="w-full border border-[#EDE9FE] rounded-xl p-3 text-[16px] outline-none bg-[#FDF8F0] mt-1">
+<button onclick="sendOrder()" class="w-full bg-[#6D28D9] text-white py-3.5 rounded-full font-bold text-[17px] mt-4">أرسل الطلب عبر واتساب 💬</button>
+<button onclick="clearCart()" class="w-full text-red-500 py-2 font-bold mt-1">مسح السلة</button>
+</div>
+<div class="text-center mt-4"><button onclick="go('menu',null)" class="bg-[#6D28D9] text-white px-8 py-3 rounded-full font-bold">تصفح القائمة ←</button></div>
+</div>
+</div>
+<div id="page-contact" class="page">
+<div class="mt-4 max-w-[700px] mx-auto">
+<h2 class="text-[28px] font-bold text-center text-[#2E1065]">تواصل معنا</h2>
+<p class="text-center text-[14px] text-gray-500">نحن قريبون منك، تعال واسترخ معنا ☕</p>
+<div class="bg-[#6D28D9] text-white rounded-[22px] p-5 mt-4 text-center">
+<p class="text-[28px]">🌙</p>
+<p class="font-bold text-[20px]">أوقات العمل</p>
+<p class="text-[16px] mt-1">يومياً من 4 عصراً حتى 2:30 صباحاً</p>
+<p class="text-[13px] text-white/80">مزاج الليل عندنا أجمل 😍</p>
+</div>
+<div class="bg-white rounded-[22px] border border-[#EDE9FE] p-5 mt-3">
+<p class="font-bold text-[18px]">📍 موقعنا - WADQ Street Cafe</p>
+<p class="text-[14px] text-gray-500 mt-1">شارع الفلات، الخرطوم - السودان</p>
+<a href="https://maps.google.com/?q=16.538935,42.863037" target="_blank" class="block text-center bg-[#6D28D9] text-white py-3 rounded-full font-bold mt-3">افتح الخريطة ←</a>
+</div>
+<div class="bg-white rounded-[22px] border border-[#EDE9FE] p-5 mt-3">
+<p class="font-bold text-[18px]">👻 سناب شات</p>
+<p class="text-[14px] text-gray-500">تابعنا وشاهد جديد ودق كل يوم</p>
+<img src="snab.jpg.jpg" class="w-44 h-44 object-contain mx-auto mt-3 bg-[#FDF8F0] rounded-xl border">
+<p class="text-center text-[13px] text-gray-500 mt-2">امسح الباركود - سناب ودق</p>
+</div>
+<div class="bg-white rounded-[22px] border border-[#EDE9FE] p-5 mt-3">
+<p class="font-bold text-[18px]">💬 راسلنا عبر واتساب</p>
+<p class="text-[14px] text-gray-500">رد سريع، من 4 عصراً حتى 2:30 صباحاً</p>
+<p class="font-bold text-[20px] text-[#6D28D9] mt-1" dir="ltr">0500757180</p>
+<a href="https://wa.me/966500757180" target="_blank" class="block text-center bg-[#25D366] text-white py-3 rounded-full font-bold mt-3">راسلنا على واتساب 💬</a>
+</div>
+</div>
+</div>
+<div id="page-about" class="page">
+<div class="mt-4 hero-grad rounded-[28px] p-6 text-white text-center">
+<span class="bg-white/25 px-4 py-1 rounded-full text-[13px] font-bold">Our Story • قصتنا</span>
+<h2 class="text-[32px] font-bold leading-[1.3] mt-3">الحكاية تبدأ<br>من فنجان</h2>
+<p class="text-white/90 text-[15px] leading-[1.9] mt-2">في شارعٍ يعجّ بالحياة، قررنا أن نكون محطة هدوء صغيرة، حيث تُحضَّر القهوة بحب وتُقدَّم بابتسامة.</p>
+</div>
+<div class="mt-4 bg-white rounded-[22px] border border-[#EDE9FE] p-3 overflow-hidden">
+<div class="w-full aspect-[4/5] overflow-hidden rounded-[18px]">
+<img src="bage.jpg.jpg" class="w-full h-full object-cover" style="object-position:50% 68%">
+</div>
+<p class="text-center text-[14px] text-gray-500 mt-2">في ودق، اخترنا لك بعناية ما يليق بذائقتك.. من دفء القهوة، إلى انتعاش المشروبات الباردة، وحلاوة الحلا.</p>
+</div>
+<div class="mt-4">
+<div class="bg-white rounded-[22px] border border-[#EDE9FE] p-5">
+<h3 class="font-bold text-[20px] text-[#2E1065]">قهوة تُحضَّر بحب،<br>لترتقي بيومك</h3>
+<p class="text-[15px] text-gray-600 leading-[2] mt-2">ودق ليس مجرد مقهى شارع، بل فكرة بسيطة: أن تكون القهوة رفيقك اليومي. نختار حبوبنا بعناية، ونطحنها طازجة، ونحضّر كل كوب كأنه الأول. من V60 الإثيوبي الفاخر إلى السبانيش لاتيه البارد، لكل صنف عندنا حكاية.</p>
+<p class="text-[15px] text-gray-600 leading-[2] mt-2">مفتوحون يومياً من 4 عصراً حتى 2:30 صباحاً، لأن مزاج الليل عندنا أجمل.</p>
+</div>
+<div class="grid grid-cols-3 gap-2 mt-3 text-center">
+<div class="bg-white rounded-2xl border p-3"><p class="font-bold text-[17px] text-[#6D28D9]">طازج</p><p class="text-[12px] text-gray-500">يُطحن عند الطلب</p></div>
+<div class="bg-white rounded-2xl border p-3"><p class="font-bold text-[17px] text-[#6D28D9]">سريع</p><p class="text-[12px] text-gray-500">دون انتظار</p></div>
+<div class="bg-white rounded-2xl border p-3"><p class="font-bold text-[17px] text-[#6D28D9]">بكل حب</p><p class="text-[12px] text-gray-500">قهوتك بذوقنا</p></div>
+</div>
+<div class="bg-[#F5EFE6] rounded-[22px] p-5 mt-3">
+<p class="font-bold text-[18px] text-[#2E1065]">وعدنا</p>
+<p class="text-[15px] text-gray-600 leading-[1.9] mt-1">أن تكون كل زيارة لودق لحظة راحة صغيرة في يومك، وأن تخرج من عندنا بابتسامة وفنجان يليق بذوقك.</p>
+</div>
+<div class="bg-white rounded-[22px] border p-5 mt-3 text-center">
+<p class="font-bold text-[18px]">ذق حكايتنا بنفسك</p>
+<p class="text-[14px] text-gray-500">تعال وجرّب قهوة ودق اليوم - مفتوحون من 4 عصراً</p>
+<button onclick="go('menu',null)" class="bg-[#6D28D9] text-white px-8 py-3 rounded-full font-bold mt-3">تصفح القائمة ←</button>
+</div>
+</div>
+</div>
+<div class="mt-6 bg-[#F5EFE6] rounded-[22px] p-5 text-center">
+<p class="text-[22px] font-bold text-[#2E1065]">ودق ☕</p>
+<p class="text-[13px] text-gray-500">حيث تُروى حكاية القهوة</p>
+<p class="text-[12px] text-gray-400 mt-1">مقهى الشارع - طلبات خارجية فقط • بدون جلسات • بدون حجز</p>
+<p class="text-[13px] text-[#6D28D9] font-bold mt-1">🕐 يومياً من 4 عصراً حتى 2:30 صباحاً 🌙</p>
+<div class="flex justify-center gap-2 mt-3"><button onclick="go('menu',null)" class="bg-white border px-4 py-2 rounded-full text-[14px] font-bold">القائمة</button><button onclick="go('contact',null)" class="bg-white border px-4 py-2 rounded-full text-[14px] font-bold">تواصل</button></div>
+<p class="text-[11px] text-gray-400 mt-3">© ودق - WADQ Street Cafe</p>
+</div>
+</div>
+<button onclick="go('order',null)" class="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 bg-[#4C1D95] text-white pl-5 pr-2 py-2 rounded-full shadow-lg flex items-center gap-2 font-bold text-[15px] whitespace-nowrap">
+🛒 السلة • <span id="cartCountFloat">0</span> • <span id="cartTotalFloat">0 ر.س</span>
+<span class="bg-white text-[#4C1D95] px-3 py-1.5 rounded-full text-[13px]">عرض السلة</span>
+</button>
+<div id="detailModal" class="fixed inset-0 bg-black/60 hidden z-[60] flex items-end sm:items-center justify-center" onclick="if(event.target==this) closeDetail()">
+<div class="bg-white w-full sm:max-w-md rounded-t-[28px] sm:rounded-[28px] overflow-hidden max-h-[92vh] overflow-y-auto">
+<div class="relative card-top p-6 text-center">
+<button onclick="closeDetail()" class="absolute top-3 left-3 w-8 h-8 bg-white rounded-full shadow font-bold">×</button>
+<span class="absolute top-3 right-3 bg-white px-2 py-1 rounded-full text-[12px]">✦ ودق</span>
+<img id="dImg" class="w-32 h-32 object-cover rounded-full mx-auto border-4 border-white shadow">
+<h3 id="dName" class="text-[28px] font-bold text-[#2E1065] mt-3"></h3>
+<p id="dCat" class="text-[13px] text-gray-500"></p>
+</div>
+<div class="p-5">
+<div class="flex justify-between items-center"><span class="bg-[#F5EFE6] px-3 py-1 rounded-full font-bold text-[15px]" id="dPrice"></span><span class="text-[13px] text-gray-500">ودق • قهوة طازجة</span></div>
+<p id="dDesc" class="text-[15px] text-gray-600 leading-[1.9] mt-3"></p>
+<div class="bg-[#EDE9FE] rounded-full px-3 py-2 text-center text-[13px] font-bold text-[#4C1D95] mt-3">✓ يُحضَّر طازجاً عند الطلب • طلبات خارجية</div>
+<div class="flex justify-between items-center mt-4"><span class="font-bold">الكمية</span><div class="flex items-center gap-2"><button onclick="changeQty(-1)" class="w-9 h-9 bg-gray-100 rounded-full font-bold text-[20px]">-</button><span id="dQty" class="font-bold text-[18px] w-6 text-center">1</span><button onclick="changeQty(1)" class="w-9 h-9 bg-gray-100 rounded-full font-bold text-[20px]">+</button></div></div>
+<div class="flex justify-between bg-[#F5EFE6] rounded-xl p-3 mt-4"><span>الإجمالي</span><span id="dTotal" class="font-bold text-[#6D28D9]"></span></div>
+<button onclick="addFromDetail()" class="w-full bg-[#6D28D9] text-white py-3.5 rounded-full font-bold text-[17px] mt-4">تأكيد الطلب - أضف إلى السلة</button>
+</div>
+</div>
+</div>
+<script>
+const items=[
+{name:"إثيوبيا V60",price:15,priceText:"15 ر.س",cat:"hot",catName:"المشروبات الساخنة",img:"teaeth.jpg.jpg",desc:"بن إثيوبي فاخر، نكهة فواكه وزهور، تحضير V60 على الأصول."},
+{name:"كولومبيا V60",price:15,priceText:"15 ر.س",cat:"hot",catName:"المشروبات الساخنة",img:"kolom.jpg.jpg",desc:"بن كولومبي متوازن، نكهة شوكولاتة ومكسرات خفيفة."},
+{name:"شاي إنجليزي",price:5,priceText:"5 ر.س",cat:"hot",catName:"المشروبات الساخنة",img:"teaenj.jpg.jpg",desc:"شاي كلاسيكي أصيل، ثقيل وذو مزاج."},
+{name:"أمريكانو",price:10,priceText:"10 ر.س",cat:"hot",catName:"المشروبات الساخنة",img:"amrikano.jpg.jpg",desc:"إسبريسو مخفف بماء ساخن، قوي ومركز."},
+{name:"إسبريسو دبل شوت",price:7,priceText:"7 ر.س",cat:"hot",catName:"المشروبات الساخنة",img:"bapol.jpg.jpg",desc:"جرعة مضاعفة من الإسبريسو، لمن يحب الانتعاش."},
+{name:"كراميل ميكاتو",price:10,priceText:"10 ر.س",cat:"hot",catName:"المشروبات الساخنة",img:"carmecato.jpg.jpg",desc:"إسبريسو مع حليب وصوص الكراميل."},
+{name:"كابتشينو",price:12,priceText:"12 ر.س",cat:"hot",catName:"المشروبات الساخنة",img:"captsh.jpg.jpg",desc:"إسبريسو مع حليب مبخر ورغوة ناعمة."},
+{name:"قهوة سعودية",price:5,priceText:"5 ر.س",cat:"hot",catName:"المشروبات الساخنة",img:"coffisudia.jpg.jpg",desc:"قهوة عربية سعودية بالهيل."},
+{name:"هوت شوكلت",price:10,priceText:"10 ر.س",cat:"hot",catName:"المشروبات الساخنة",img:"hot.jpg.jpg",desc:"شوكولاتة ساخنة كريمية."},
+{name:"قهوة تركية",price:6,priceText:"6 ر.س",cat:"hot",catName:"المشروبات الساخنة",img:"turkicofe.jpg.jpg",desc:"قهوة تركية على أصولها."},
+{name:"قهوة إيطالية",price:12,priceText:"12 ر.س",cat:"hot",catName:"المشروبات الساخنة",img:"etalecofi.jpg.jpg",desc:"قهوة إيطالية كلاسيكية."},
+{name:"موكا توفي",price:10,priceText:"10 ر.س",cat:"hot",catName:"المشروبات الساخنة",img:"mokatofi.jpg.jpg",desc:"موكا مع صوص التوفي."},
+{name:"موكا فراولة",price:10,priceText:"10 ر.س",cat:"hot",catName:"المشروبات الساخنة",img:"mocas.jpg.jpg",desc:"موكا مع نكهة الفراولة."},
+{name:"ميكاتو",price:10,priceText:"10 ر.س",cat:"hot",catName:"المشروبات الساخنة",img:"micato.jpg.jpg",desc:"إسبريسو مع نقطة حليب."},
+{name:"قهوة فرنسية بالبندق",price:12,priceText:"12 ر.س",cat:"hot",catName:"المشروبات الساخنة",img:"frascofe.jpg.jpg",desc:"قهوة فرنسية بنكهة البندق."},
+{name:"موكا بندق",price:10,priceText:"10 ر.س",cat:"hot",catName:"المشروبات الساخنة",img:"mokabond.jpg.jpg",desc:"موكا مع بندق محمص."},
+{name:"بيستاشو لاتيه",price:13,priceText:"13 ر.س",cat:"hot",catName:"المشروبات الساخنة",img:"bstashio.jpg.jpg",desc:"لاتيه بنكهة الفستق."},
+{name:"ماتشا",price:14,priceText:"14 ر.س",cat:"hot",catName:"المشروبات الساخنة",img:"matsha.jpg.jpg",desc:"ماتشا يابانية أصلية."},
+{name:"لاتيه",price:12,priceText:"12 ر.س",cat:"hot",catName:"المشروبات الساخنة",img:"2.jpg.jpg",desc:"لاتيه كلاسيكي بحليب ناعم."},
+{name:"فلات وايت",price:12,priceText:"12 ر.س",cat:"hot",catName:"المشروبات الساخنة",img:"2.jpg.jpg",desc:"فلات وايت، قهوة أقوى."},
+{name:"كورتادو",price:12,priceText:"12 ر.س",cat:"hot",catName:"المشروبات الساخنة",img:"koet.jpg.jpg",desc:"كورتادو إسباني."},
+{name:"موكا شوكولاتة",price:10,priceText:"10 ر.س",cat:"hot",catName:"المشروبات الساخنة",img:"mokacok.jpg.jpg",desc:"موكا شوكولاتة غنية."},
+{name:"يمني فاخر V60",price:16,priceText:"16 ر.س",cat:"hot",catName:"المشروبات الساخنة",img:"4.jpg.png",desc:"بن يمني فاخر."},
+{name:"إثيوبيا V60 بارد",price:15,priceText:"15 ر.س",cat:"cold",catName:"المشروبات الباردة",img:"4.jpg.png",desc:"إثيوبيا V60 على الثلج."},
+{name:"كولومبيا V60 بارد",price:15,priceText:"15 ر.س",cat:"cold",catName:"المشروبات الباردة",img:"4.jpg.png",desc:"كولومبيا V60 بارد."},
+{name:"قهوة اليوم",price:7,priceText:"5 - 9 ر.س",cat:"cold",catName:"المشروبات الباردة",img:"day.jpg.jpg",desc:"قهوة اليوم."},
+{name:"يمني فاخر V60 بارد",price:18,priceText:"18 ر.س",cat:"cold",catName:"المشروبات الباردة",img:"4.jpg.png",desc:"يمني فاخر بارد."},
+{name:"إسبريسو أفريدو",price:8,priceText:"8 ر.س",cat:"cold",catName:"المشروبات الباردة",img:"sprisoalfrido.jpg.jpg",desc:"إسبريسو مثلج."},
+{name:"كركديه",price:10,priceText:"10 ر.س",cat:"cold",catName:"المشروبات الباردة",img:"car.jpg.jpg",desc:"كركديه سوداني بارد."},
+{name:"أمريكانو بارد",price:10,priceText:"10 ر.س",cat:"cold",catName:"المشروبات الباردة",img:"cold.jpg.jpg",desc:"أمريكانو على الثلج."},
+{name:"سبانيش لاتيه",price:15,priceText:"15 ر.س",cat:"cold",catName:"المشروبات الباردة",img:"spansh.jpg.jpg",desc:"سبانيش لاتيه بارد، الأكثر طلباً."},
+{name:"لاتيه بارد",price:13,priceText:"13 ر.س",cat:"cold",catName:"المشروبات الباردة",img:"coldlati.jpg.jpg",desc:"لاتيه بارد."},
+{name:"بيستاشو لاتيه بارد",price:16,priceText:"16 ر.س",cat:"cold",catName:"المشروبات الباردة",img:"coldlati.jpg.jpg",desc:"بيستاشو بارد."},
+{name:"سبانيش ماتشا",price:16,priceText:"16 ر.س",cat:"cold",catName:"المشروبات الباردة",img:"spanshmatsha.jpg.jpg",desc:"ماتشا مع سبانيش."},
+{name:"كراميل بارد",price:15,priceText:"15 ر.س",cat:"cold",catName:"المشروبات الباردة",img:"cramilcold.jpg.jpg",desc:"كراميل بارد."},
+{name:"موهيتو أزرق",price:10,priceText:"10 ر.س",cat:"cold",catName:"المشروبات الباردة",img:"blu.jpg.jpg",desc:"موهيتو أزرق."},
+{name:"كودرد بنكهة",price:10,priceText:"10 ر.س",cat:"cold",catName:"المشروبات الباردة",img:"cod.jpg.jpg",desc:"كودرد بنكهتك المفضلة."},
+{name:"موهيتو مكس",price:10,priceText:"10 ر.س",cat:"cold",catName:"المشروبات الباردة",img:"mix.jpg.jpg",desc:"موهيتو مشكل."},
+{name:"موهيتو أحمر",price:10,priceText:"10 ر.س",cat:"cold",catName:"المشروبات الباردة",img:"mohito1.jpg.jpg",desc:"موهيتو أحمر."},
+{name:"موكا شوكولاتة بارد",price:12,priceText:"12 ر.س",cat:"cold",catName:"المشروبات الباردة",img:"mokashoclit.jpg.jpg",desc:"موكا شوكولاتة باردة."},
+{name:"موكا توفي بارد",price:12,priceText:"12 ر.س",cat:"cold",catName:"المشروبات الباردة",img:"tofi.jpg.jpg",desc:"موكا توفي بارد."},
+{name:"موكا فراولة بارد",price:12,priceText:"12 ر.س",cat:"cold",catName:"المشروبات الباردة",img:"stropri.jpg.jpg",desc:"موكا فراولة باردة."},
+{name:"موكا بندق بارد",price:12,priceText:"12 ر.س",cat:"cold",catName:"المشروبات الباردة",img:"bon.jpg.jpg",desc:"موكا بندق باردة."},
+{name:"كيك الشوكولاتة",price:15,priceText:"15 ر.س",cat:"sweet",catName:"حلويات",img:"cake.jpg.jpg",desc:"كيك شوكولاتة طري."},
+{name:"كوكيز شوكولاتة بالصوص",price:9,priceText:"9 ر.س",cat:"sweet",catName:"حلويات",img:"cookies2.jpg.jpg",desc:"كوكيز مع صوص."},
+{name:"كيكة العسل",price:16,priceText:"16 ر.س",cat:"sweet",catName:"حلويات",img:"hony.jpg.jpg",desc:"كيكة عسل روسية."},
+{name:"بان كيك",price:12,priceText:"10 - 15 ر.س",cat:"sweet",catName:"حلويات",img:"ban.jpg.jpg",desc:"بان كيك طري."},
+{name:"كيكة الزعفران",price:13,priceText:"13 ر.س",cat:"sweet",catName:"حلويات",img:"safran.jpg.jpg",desc:"كيكة زعفران."},
+{name:"تشيز كيك بيكان",price:18,priceText:"18 ر.س",cat:"sweet",catName:"حلويات",img:"bican.jpg.jpg",desc:"تشيز كيك بيكان."},
+{name:"وافل",price:7,priceText:"7 ر.س",cat:"sweet",catName:"حلويات",img:"waul.jpg.jpg",desc:"وافل مقرمش."},
+{name:"بودينغ الشوكولاتة",price:14,priceText:"14 ر.س",cat:"sweet",catName:"حلويات",img:"boing.jpg.jpg",desc:"بودينغ شوكولاتة."},
+{name:"كوكيز شوكولاتة",price:8,priceText:"8 ر.س",cat:"sweet",catName:"حلويات",img:"cookies.jpg.jpg",desc:"كوكيز كلاسيكي."},
+{name:"سيباستيان",price:17,priceText:"17 ر.س",cat:"sweet",catName:"حلويات",img:"san.jpg.jpg",desc:"سان سيباستيان."},
+{name:"تيراميسو",price:15,priceText:"15 ر.س",cat:"sweet",catName:"حلويات",img:"tiram.jpg.jpg",desc:"تيراميسو إيطالي."},
+{name:"إضافة صوص",price:2,priceText:"2 ر.س",cat:"sweet",catName:"حلويات",img:"sus.jpg.jpg",desc:"إضافة صوص لأي حلوى."}
+];
+let currentCat='all',currentItem=null,cart={},dQty=1;
+function go(page,btn){document.querySelectorAll('.page').forEach(p=>p.classList.remove('show'));document.getElementById('page-'+page).classList.add('show');document.querySelectorAll('.nav-pill').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
+function cardHTML(it,i){return `<div class="bg-white rounded-[22px] overflow-hidden border border-[#EDE9FE] shadow-sm flex flex-col"><div onclick='openDetail(${i})' class="cursor-pointer card-top p-4 text-center flex-1"><span class="inline-block bg-white px-2 py-0.5 rounded-full text-[11px]">✦ ودق</span><img src="${it.img}" onerror="this.src='bage.jpg.jpg'" class="w-24 h-24 object-cover rounded-full mx-auto border-4 border-white shadow mt-2"><p class="font-bold text-[17px] text-[#2E1065] mt-2 leading-tight">${it.name}</p><p class="text-[13px] text-gray-500 mt-1 leading-[1.6]">${it.desc}</p></div><div class="p-3 flex justify-between items-center border-t border-[#F5EFE6] bg-white"><span class="font-bold text-[17px] text-[#2E1065]">${it.priceText}</span><button onclick="openDetail(${i})" class="bg-[#6D28D9] text-white px-5 py-2 rounded-full text-[14px] font-bold">اطلب</button></div></div>`;}
+function render(){let q=document.getElementById('searchInput').value.toLowerCase();let grid=document.getElementById('menuGrid');grid.innerHTML='';items.forEach((it,i)=>{if(currentCat!='all'&&it.cat!=currentCat)return;if(q&&!it.name.toLowerCase().includes(q))return;grid.innerHTML+=cardHTML(it,i);});let best=[30,0,44,45];let bg=document.getElementById('bestGrid');bg.innerHTML='';best.forEach(i=>{bg.innerHTML+=cardHTML(items[i],i);});}
+function showCat(c,btn){currentCat=c;document.querySelectorAll('.cat-pill').forEach(b=>b.classList.remove('active'));btn.classList.add('active');render();}
+function filterItems(){render();}
+function openDetail(i){currentItem=i;dQty=1;let it=items[i];document.getElementById('dImg').src=it.img;document.getElementById('dName').innerText=it.name;document.getElementById('dCat').innerText=it.catName;document.getElementById('dDesc').innerText=it.desc;document.getElementById('dPrice').innerText=it.priceText;document.getElementById('dQty').innerText=dQty;document.getElementById('dTotal').innerText=(it.price*dQty)+' ر.س';document.getElementById('detailModal').classList.remove('hidden');}
+function closeDetail(){document.getElementById('detailModal').classList.add('hidden');}
+function changeQty(d){dQty=Math.max(1,dQty+d);document.getElementById('dQty').innerText=dQty;document.getElementById('dTotal').innerText=(items[currentItem].price*dQty)+' ر.س';}
+function addFromDetail(){cart[currentItem]=(cart[currentItem]||0)+dQty;updateCart();closeDetail();go('order',null);}
+function updateCart(){let box=document.getElementById('cartBox');let total=0,count=0;box.innerHTML='';if(Object.keys(cart).length==0){box.innerHTML='<div class="text-center py-6"><p class="text-[30px]">🛒</p><p class="font-bold">سلتك فارغة الآن</p><p class="text-[13px] text-gray-500">اختر من القائمة وابدأ طلبك</p></div>';}for(let i in cart){let it=items[i],qty=cart[i],sub=it.price*qty;total+=sub;count+=qty;box.innerHTML+=`<div class="flex justify-between items-center border-b py-3"><div class="flex gap-2 items-center"><img src="${it.img}" onerror="this.src='bage.jpg.jpg'" class="w-12 h-12 object-cover rounded-full"><div><p class="font-bold">${it.name}</p><p class="text-[13px] text-gray-500">${it.priceText} × ${qty} = ${sub} ر.س</p></div></div><div class="flex gap-1 items-center"><button onclick="cart[${i}]--;if(cart[${i}]<=0)delete cart[${i}];updateCart()" class="w-8 h-8 bg-gray-100 rounded-full font-bold">-</button><span class="w-5 text-center font-bold">${qty}</span><button onclick="cart[${i}]++;updateCart()" class="w-8 h-8 bg-[#6D28D9] text-white rounded-full font-bold">+</button></div></div>`;}document.getElementById('cartTotal').innerText=total+' ر.س';document.getElementById('cartCountFloat').innerText=count;document.getElementById('cartTotalFloat').innerText=total+' ر.س';}
+function clearCart(){cart={};updateCart();}
+function sendOrder(){if(Object.keys(cart).length==0){alert('السلة فارغة! اختر صنفاً أولاً');go('menu',null);return;}let name=document.getElementById('custName').value||'زبون ودق';let note=document.getElementById('custNote').value;let msg=`أهلاً ودق ☕%0Aطلب جديد من: ${name}%0A----------------%0A`;let total=0;for(let i in cart){let it=items[i],qty=cart[i];total+=it.price*qty;msg+=`${it.name} × ${qty} = ${it.price*qty} ر.س%0A`;}msg+=`----------------%0Aالمجموع: ${total} ر.س`;if(note)msg+=`%0Aملاحظة: ${note}`;window.open(`https://wa.me/966500757180?text=${msg}`,'_blank');}
+render();updateCart();
+</script>
+</body>
+</html>
